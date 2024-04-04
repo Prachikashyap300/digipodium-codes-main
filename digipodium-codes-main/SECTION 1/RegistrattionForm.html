@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistrationForm</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background: url(/Images/new.png); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+
+        }
+        .mycard{
+            background-color: rgba(255, 255, 255, 0.288);
+            width: 50%;
+            height: 400px;
+           
+            padding-top: 50px;
+            border-radius: 50px;
+            
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+           
+
+        }
+        .myform{
+            padding: 0px;
+        }
+        .inp{
+            background-color: rgba(255, 255, 255, 0);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 1px solid black;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+        .inp::placeholder{
+            color: black;
+            font-size: 10px;
+        }
+        .btn{
+            background-color: rgba(255, 255, 255, 0);
+            width: 80px;
+            color: black;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 50px;
+            border-color: 1px solid black;
+            cursor:pointer;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn:hover{
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="mycard">
+        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: black;">Signs up</h3>
+        <form class="myform">
+            <img src="/Images/user.png" height="25px" width="25px">
+            <input class="inp" type="text" placeholder="Enter your Name"><br>
+            <img src="/Images/phone-call.png" height="25px" width="25px">
+            <input class="inp" type="text" placeholder="Enter your Phone"><br>
+            <img src="/Images/email.png" height="25px" width="25px">
+            <input class="inp" type="email" placeholder="Enter your Email"><br>
+            <img src="/Images/eye.png" height="25px" width="25px">
+
+            <input class="inp" type="password" placeholder="Enter your Password"><br>
+            <button class="btn" style="margin-top: 20px;">Login</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
