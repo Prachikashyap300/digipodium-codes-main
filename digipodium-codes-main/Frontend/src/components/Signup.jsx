@@ -18,7 +18,7 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
     // step 1: formik initialization
-    const signupForm = useFormik({
+    const signupForm = useForkmik({
         initialValues: {
             name: '',
             email: '',
