@@ -7,9 +7,11 @@ router.post('/add', (req,res) => {
     //storing data to mongo DB
     new Model (req.body).save()
     .then((result) => {
-        req.json(result)
+        res.json(result)
     }).catch((err) => {
         console.log(err)
         res.status(500).json(err)
     });
 })
+
+module.exports = router;
