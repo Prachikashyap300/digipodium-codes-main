@@ -1,13 +1,14 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 const port = 5000;
 
-const userRouter= ('./Routers/User');
+// Import the user router
+const userRouter = require('./Routers/User');
 
-//middleware
-app.use(express.json());
-app.use('/user', userRouter)
+// Use the user router in the app
+app.use('/user', userRouter);
 
-app.listen(port, ()=>{
-    console.log(`server is running on port ${port}`);
-})
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
