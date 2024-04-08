@@ -6,7 +6,7 @@ const userRouter= ('./Routers/User');
 
 //middleware
 app.use(express.json());
-app.use('user', userRouter)
+app.use('/user', userRouter)
 
 app.listen(port, ()=>{
     console.log(`server is running on port ${port}`);
