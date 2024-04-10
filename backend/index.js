@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
-const port = 4000;
+const port = 5000;
 
+// Import the user router
 const userRouter = require('./Routers/User');
 
-//middleware for this mongodb is use
+// Use the user router in the app
+app.use('/user', userRouter);
 
-app.use(express.json());
-app.use('/User', userRouter);
-
-app.listen(port, ()=>{
-    console.log(`Server is running on port ${port}`);
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
