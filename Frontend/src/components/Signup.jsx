@@ -25,10 +25,24 @@ const Signup = () => {
             email: '',
             password: ''
         },
-        onSubmit: (values, { resetForm }) => {
-            console.log(values)
-            enqueueSnackbar('ignup successful' , {variant: 'success'})
-            resetForm()
+        //backend connectivity
+        onSubmit: async(values, action)=>{
+            console.log(values);
+            const res = await fetch('http://localhost:4000/User/add',{
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            });
+            console.log(res.status)
+            action.resetForm()
+
+            if (res.status === 200) {
+                enqueueSnackbar('Signup successful', {variant: 'success'})
+            } else {
+                enqueueSnackbar('Signup failed', {variant: 'error'})
+            }
         },
         validationSchema: SignupSchema
     })
